@@ -1,0 +1,40 @@
+/**
+  *
+  */
+[VarDef, $PLUGIN_NAME, 	"AlphaManager"]
+[VarDef, $BUTTONS_SUBMENU,	"Masks"]
+
+
+[VarSet, $PLUGIN_NENU,	[StrMerge, "~", $PLUGIN_NAME ]]
+
+[VarSet, $PLUGIN_DATA_PATH,	[FileNameResolvePath, [StrMerge, $PLUGIN_NAME, "Data" ]]]
+
+[VarDef, $ALPHA_DEFAULT_FOLDER,	"ZBRUSH_ZData\Alphas"] // DEV
+
+[VarSet, $MAKS_BUTTONS,	[StrMerge, $PLUGIN_NENU, ":", $BUTTONS_SUBMENU, ":"]]
+
+[VarSet, $ZFILE_UTILS_DLL, [StrMerge, $PLUGIN_DATA_PATH, "\\ZFileUtils64.dll"]]
+
+[VarSet, $CONTROSL_PATH,	[StrMerge, $PLUGIN_NENU, ":"]]
+//[VarSet, $CONTROSL_PATH,	"" ] // DEV
+
+
+<zscriptinsert, "AlphaManagerData/loadExistingAlphas.txt">	// "./AlphaManagerData/loadExistingAlphas.txt"
+
+<zscriptinsert, "AlphaManagerData/maskToAlpha.txt">	// "./AlphaManagerData/maskToAlpha.txt"
+
+<zscriptinsert, "AlphaManagerData/maskLoad.txt">	// "./AlphaManagerData/maskLoad.txt"
+
+<zscriptinsert, "AlphaManagerData/importAlpha.txt">	// "./AlphaManagerData/importAlpha.txt"
+<zscriptinsert, "AlphaManagerData/importAlphaFile.txt">	// "./AlphaManagerData/importAlphaFile.txt"
+
+<zscriptinsert, "AlphaManagerData/enableMaskButton.txt">	// "./AlphaManagerData/enableMaskButton.txt"
+<zscriptinsert, "AlphaManagerData/resizeAlphaButton.txt">	// "./AlphaManagerData/resizeAlphaButton.txt"
+
+<zscriptinsert, "AlphaManagerData/UI-AlphaManager.txt">	// "./AlphaManagerData/UI-AlphaManager.txt"
+<zscriptinsert, "AlphaManagerData/UI-LoadMaskButtons.txt">	// "./AlphaManagerData/UI-LoadMaskButtons.txt"
+
+
+<zscriptinsert, "AlphaManagerData/alphaToggle.txt">	// "./AlphaManagerData/alphaToggle.txt"
+
+[RoutineCall, loadExistingAlphas ]

@@ -1,0 +1,30 @@
+/** importAlphaFile
+  */
+[RoutineDef, importAlphaFile
+,
+	[VarSet, $psd_path, [FileNameAsk, "PSD(*.psd)",, "Browse psd file..."]]
+
+	[VarSet, $target_path, [FileNameResolvePath,[StrMerge, "ZBRUSH_ZData\Alphas\\", [FileNameExtract, $psd_path, 2+4]]]]
+
+	/* copy the file */
+	[MemCreate, ZFileUtils_CopyFile, 256, 0]
+	[MemWriteString, ZFileUtils_CopyFile, $target_path, 0]
+	[If, [FileExists, $psd_path],
+		[VarSet, err, [FileExecute, $ZFILE_UTILS_DLL, "FileCopyTo", $psd_path,, ZFileUtils_CopyFile]]
+	]
+	[MemDelete, ZFileUtils_CopyFile]
+	[If, err, [Note, "An error occurred.",, 2]]
+
+	[If, [StrLength,$psd_path ] > 0
+	, // THEN LOAD TOOL
+		[FileNameSetNext, $psd_path]
+
+		[IPress, Alpha:Import]
+
+		[RoutineCall, alphaToMask]
+
+		[Note, [StrMerge, "ALPHA IMPORTED\n\n", [FileNameExtract, $psd_path, 2] ],, 3]
+	]
+
+]
+//[IButton, "importAlphaFile()" , "", [RoutineCall, importAlphaFile] ]

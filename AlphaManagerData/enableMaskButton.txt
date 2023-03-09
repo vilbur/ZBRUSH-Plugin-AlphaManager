@@ -1,0 +1,11 @@
+/** enableMaskButton
+  */
+[RoutineDef, enableMaskButton
+,
+	//[Note, "enableMaskButton"]
+	[IEnable, [StrMerge, $MAKS_BUTTONS, "Mask ", $alpha_id ] ]
+
+, // PARAMS
+	$alpha_id
+]
+//[IButton, "enableMaskButton()" , "", [RoutineCall, enableMaskButton, 1] ]

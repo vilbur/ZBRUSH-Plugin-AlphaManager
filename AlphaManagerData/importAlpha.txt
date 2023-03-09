@@ -1,0 +1,18 @@
+/** importAlpha
+  */
+[RoutineDef, importAlpha
+,
+	[VarSet, $psd_path, [FileNameAsk, "PSD(*.psd)", , "Browse psd file..."]]
+
+	[If, [StrLength,$psd_path ] > 0
+	, // THEN LOAD TOOL
+		[FileNameSetNext, $psd_path]
+
+		[IPress, Alpha:Import]
+
+		[RoutineCall, alphaToMask]
+
+		[Note, [StrMerge, "ALPHA IMPORTED\n\n", [FileNameExtract, $psd_path, 2] ],, 3]
+	]
+]
+//[IButton, "importAlpha()" , "", [RoutineCall, importAlpha] ]

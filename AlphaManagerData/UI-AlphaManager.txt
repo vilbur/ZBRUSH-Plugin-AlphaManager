@@ -1,0 +1,20 @@
+
+[IPalette, $PLUGIN_NENU ]
+
+
+[IButton, [StrMerge, $CONTROSL_PATH, "MASK > Alpha"], "Save Mask As Alpha",	[RoutineCall, maskToAlpha],, 96,,,48]
+
+[IButton, [StrMerge, $CONTROSL_PATH, "TOOGGLE"], "Toggle Mask On\Off",	[RoutineCall, alphaToggle],,	68,,,48]
+[IButton, [StrMerge, $CONTROSL_PATH, "   R"], "Restore configuration",	[IPress,Alpha:R],,	30,,,48]
+
+[IButton, [StrMerge, $CONTROSL_PATH, "Import Alpha"], "Import alpha",	[RoutineCall, importAlpha],,	96,,,48]
+
+[IButton, [StrMerge, $CONTROSL_PATH, "Import File"], "Import alpha file",	[RoutineCall, importAlphaFile],,	96,,,48]
+
+
+/** TEST
+  *
+  */
+//[IButton, "Mask 2", "Load Alpha 2 as mask",	[RoutineCall, maskLoad, 2],, 56,,, 52]
+//[IButton, "Mask 3", "Load Alpha 3 as mask",	[RoutineCall, maskLoad, 3],, 56,,, 52]
+//[IButton, "Mask 1", "Load Alpha 4 as mask",	[RoutineCall, maskLoad, 4],, 56,,, 52]

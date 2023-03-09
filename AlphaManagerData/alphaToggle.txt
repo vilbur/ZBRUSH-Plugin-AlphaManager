@@ -1,0 +1,22 @@
+/** Toggle current Alpha on\off
+  *
+  */
+[RoutineDef, alphaToggle
+,
+	[If, [IGet,ALPHA:ItemInfo]
+	, // TURN OFF if alpha is defined
+
+		[MVarDef, LAST_USED_ALPHA, 1]
+		[MVarSet, LAST_USED_ALPHA, 0, [IGet, ALPHA:ItemInfo]]
+
+		[IPress,Alpha:Alpha Off]
+
+	, // TURN ON if alpha is not defined
+
+		[If, [MemGetSize, LAST_USED_ALPHA ]
+		, // THEN
+			[ISet, Alpha:Item Info, [MVarGet, LAST_USED_ALPHA, 0] ]
+		]
+	]
+]
+//[ IButton, "alphaToggle()" , "", [RoutineCall, alphaToggle] ]
