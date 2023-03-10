@@ -2,6 +2,11 @@
   *
   */
 [VarDef, $PLUGIN_NAME, 	"AlphaManager"]
+//[VarSet, $PLUGIN_SUBMENU, 	"AlphaManager"]
+
+[VarDef, $ALPHA_BUTTON_SIZE, 	86 ]
+
+
 [VarDef, $BUTTONS_SUBMENU,	"Masks"]
 
 
@@ -29,7 +34,6 @@
 <zscriptinsert, "AlphaManagerData/importAlphaFile.txt">	// "./AlphaManagerData/importAlphaFile.txt"
 
 <zscriptinsert, "AlphaManagerData/enableMaskButton.txt">	// "./AlphaManagerData/enableMaskButton.txt"
-<zscriptinsert, "AlphaManagerData/resizeAlphaButton.txt">	// "./AlphaManagerData/resizeAlphaButton.txt"
 
 <zscriptinsert, "AlphaManagerData/UI-AlphaManager.txt">	// "./AlphaManagerData/UI-AlphaManager.txt"
 <zscriptinsert, "AlphaManagerData/UI-LoadMaskButtons.txt">	// "./AlphaManagerData/UI-LoadMaskButtons.txt"
@@ -37,4 +41,8 @@
 
 <zscriptinsert, "AlphaManagerData/alphaToggle.txt">	// "./AlphaManagerData/alphaToggle.txt"
 
+<zscriptinsert, "AlphaManagerData/resizeAlphaButtons.txt">	// "./AlphaManagerData/resizeAlphaButtons.txt"
+
 [RoutineCall, loadExistingAlphas ]
+
+[RoutineCall, resizeAlphaButtons ]

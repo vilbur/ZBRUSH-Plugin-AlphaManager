@@ -1,0 +1,19 @@
+/** resizeAlphaButtons
+  *
+  */
+[RoutineDef, resizeAlphaButtons
+,
+	[Loop, 99
+	,
+		[If, [StrLength, $i] == 1
+		, // THEN
+			[VarSet, $alpha_id, [StrMerge, " 0", $i] ]
+		, // ELSE
+			[VarSet, $alpha_id, [StrMerge, " ", $i] ]
+		]
+		
+		[IModify, [StrMerge, "Alpha:Alpha", $alpha_id], 86, 0 ]
+
+	,$i]
+]
+//[IButton, "resizeAlphaButtons()" , "", [RoutineCall, resizeAlphaButtons] ]
