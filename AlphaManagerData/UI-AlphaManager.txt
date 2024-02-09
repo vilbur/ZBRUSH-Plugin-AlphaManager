@@ -4,7 +4,8 @@
 
 [IButton, [StrMerge, $CONTROSL_PATH, "MASK > Alpha"], "Save Mask As Alpha",	[RoutineCall, maskToAlpha],, 96,,,48]
 
-[IButton, [StrMerge, $CONTROSL_PATH, "TOOGGLE"], "Toggle Mask On\Off",	[RoutineCall, alphaToggle],,	68,,,48]
+[IButton, [StrMerge, $CONTROSL_PATH, "TOOGGLE"], "Toggle Mask On\Off",	[RoutineCall, alphaToggle],,	68, Shift+Ctrl+"A",,48]
+
 [IButton, [StrMerge, $CONTROSL_PATH, "   R"], "Restore configuration",	[IPress,Alpha:R],,	30,,,48]
 
 [IButton, [StrMerge, $CONTROSL_PATH, "Import Alpha"], "Import alpha",	[RoutineCall, importAlpha],,	96,,,48]

@@ -23,6 +23,8 @@
 [VarSet, $CONTROSL_PATH,	[StrMerge, $PLUGIN_NENU, ":"]]
 //[VarSet, $CONTROSL_PATH,	"" ] // DEV
 
+[VarDef, $ALPHA_BUTTONS_RESIZED,	0]
+
 
 <zscriptinsert, "AlphaManagerData/loadExistingAlphas.txt">	// "./AlphaManagerData/loadExistingAlphas.txt"
 
@@ -35,14 +37,12 @@
 
 <zscriptinsert, "AlphaManagerData/enableMaskButton.txt">	// "./AlphaManagerData/enableMaskButton.txt"
 
-<zscriptinsert, "AlphaManagerData/UI-AlphaManager.txt">	// "./AlphaManagerData/UI-AlphaManager.txt"
-<zscriptinsert, "AlphaManagerData/UI-LoadMaskButtons.txt">	// "./AlphaManagerData/UI-LoadMaskButtons.txt"
-
-
 <zscriptinsert, "AlphaManagerData/alphaToggle.txt">	// "./AlphaManagerData/alphaToggle.txt"
 
 <zscriptinsert, "AlphaManagerData/resizeAlphaButtons.txt">	// "./AlphaManagerData/resizeAlphaButtons.txt"
 
-[RoutineCall, loadExistingAlphas ]
+<zscriptinsert, "AlphaManagerData/UI-AlphaManager.txt">	// "./AlphaManagerData/UI-AlphaManager.txt"
+<zscriptinsert, "AlphaManagerData/UI-LoadMaskButtons.txt">	// "./AlphaManagerData/UI-LoadMaskButtons.txt"
 
-[RoutineCall, resizeAlphaButtons ]
+
+//[RoutineCall, loadExistingAlphas ]
