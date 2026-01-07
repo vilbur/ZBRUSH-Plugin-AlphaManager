@@ -20,8 +20,8 @@
 
 [VarSet, $ZFILE_UTILS_DLL, [StrMerge, $PLUGIN_DATA_PATH, "\\ZFileUtils64.dll"]]
 
-//[VarSet, $CONTROSL_PATH,	[StrMerge, $PLUGIN_NENU, ":"]]	// FULL PATH: Menu > Submenu > Control
-[VarSet, $CONTROSL_PATH,	"" ]	// DEV controls in script pane
+[VarSet, $CONTROSL_PATH,	[StrMerge, $PLUGIN_NENU, ":"]]	// FULL PATH: Menu > Submenu > Control
+//[VarSet, $CONTROSL_PATH,	"" ]	// DEV controls in script pane
 
 [VarDef, $ALPHA_BUTTONS_RESIZED,	0]
 
@@ -45,4 +45,6 @@
 <zscriptinsert, "AlphaManagerData/UI-LoadMaskButtons.txt">	// "./AlphaManagerData/UI-LoadMaskButtons.txt"
 
 
-//[RoutineCall, loadExistingAlphas ]
+[RoutineCall, loadExistingAlphas ]
+
+//[RoutineCall, createBrushAlpha]

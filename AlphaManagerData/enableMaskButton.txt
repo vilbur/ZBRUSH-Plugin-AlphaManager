@@ -6,13 +6,13 @@
 	[VarSet, MaskButtonPath, [StrMerge, $MAKS_BUTTONS, "Mask ", $alpha_id ]]
 	
 	
-	[If, [IExists, MaskButtonPath ] 
-	, // THEN
+	//[If, [IExists, MaskButtonPath ] 
+	//, // THEN
 		[IEnable, MaskButtonPath ]
-	
-	, // ELSE
-		[NoteBar, [StrMerge, "------------------------------- WARNING: Mask Button Not Found: ", MaskButtonPath ]]
-	]
+	//
+	//, // ELSE
+	//	[NoteBar, [StrMerge, "------------------------------- WARNING: Mask Button Not Found: ", MaskButtonPath ]]
+	//]
 
 , // PARAMS
 	$alpha_id

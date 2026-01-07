@@ -10,7 +10,7 @@
 
 		[IPress, Alpha:Import]
 
-		[RoutineCall, alphaToMask]
+		//[RoutineCall, alphaToMask]
 
 		[Note, [StrMerge, "ALPHA IMPORTED\n\n", [FileNameExtract, $psd_path, 2] ],, 3]
 	]
