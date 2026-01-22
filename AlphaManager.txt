@@ -29,6 +29,7 @@
 <zscriptinsert, "AlphaManagerData/loadExistingAlphas.txt">	// "./AlphaManagerData/loadExistingAlphas.txt"
 
 <zscriptinsert, "AlphaManagerData/maskToAlpha.txt">	// "./AlphaManagerData/maskToAlpha.txt"
+<zscriptinsert, "AlphaManagerData/alphaToMask.txt">	// "./AlphaManagerData/alphaToMask.txt"
 
 <zscriptinsert, "AlphaManagerData/maskLoad.txt">	// "./AlphaManagerData/maskLoad.txt"
 
