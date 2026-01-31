@@ -4,15 +4,15 @@
 
 [IButton, [StrMerge, $CONTROSL_PATH, "MASK > Alpha"], "Save Mask As Alpha",	[RoutineCall, maskToAlpha],, 96,,,48]
 
-[IButton, [StrMerge, $CONTROSL_PATH, "ALPHA > Mask "], "Convert Alpha to mask",	[RoutineCall, maskToAlpha],, 96,,,48]
+[IButton, [StrMerge, $CONTROSL_PATH, "ALPHA > Mask "], "Convert Alpha to mask",	[RoutineCall, alphaToMask],, 96,,,48]
 
-[IButton, [StrMerge, $CONTROSL_PATH, "TOGGLE"], "Toggle Mask On\Off",	[RoutineCall, alphaToggle],,	68, Shift+Ctrl+"A",,48]
+[IButton, [StrMerge, $CONTROSL_PATH, "ON \ OFF"], "Toggle Mask ON\OFF.\n\nREMEBER LAST USED ALPHA",	[RoutineCall, alphaToggle],,	68, Shift+Ctrl+"A",,48]
 
-[IButton, [StrMerge, $CONTROSL_PATH, "   R"], "Restore configuration",	[IPress,Alpha:R],,	30,,,48]
+[IButton, [StrMerge, $CONTROSL_PATH, "   R"], "Restore configuration",	[IPress, Alpha:R],,	30,,,48]
 
-[IButton, [StrMerge, $CONTROSL_PATH, "Import Alpha"], "Import alpha",	[RoutineCall, importAlpha],,	96,,,48]
+[IButton, [StrMerge, $CONTROSL_PATH, "Import Alpha"], "Import alpha",	[RoutineCall, importAlpha],,	96,,, 24]
 
-[IButton, [StrMerge, $CONTROSL_PATH, "Import File"], "Import alpha file",	[RoutineCall, importAlphaFile],,	96,,,48]
+[IButton, [StrMerge, $CONTROSL_PATH, "Import File"], "Import alpha file",	[RoutineCall, importAlphaFile],,	96,,, 24]
 
 
 /** TEST

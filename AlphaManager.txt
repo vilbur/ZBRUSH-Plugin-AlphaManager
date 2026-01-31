@@ -26,6 +26,7 @@
 [VarDef, $ALPHA_BUTTONS_RESIZED,	0]
 
 
+<zscriptinsert, "AlphaManagerData/createBrushAlpha.txt">	// "./AlphaManagerData/createBrushAlpha.txt"
 <zscriptinsert, "AlphaManagerData/loadExistingAlphas.txt">	// "./AlphaManagerData/loadExistingAlphas.txt"
 
 <zscriptinsert, "AlphaManagerData/maskToAlpha.txt">	// "./AlphaManagerData/maskToAlpha.txt"
@@ -45,7 +46,6 @@
 <zscriptinsert, "AlphaManagerData/UI-AlphaManager.txt">	// "./AlphaManagerData/UI-AlphaManager.txt"
 <zscriptinsert, "AlphaManagerData/UI-LoadMaskButtons.txt">	// "./AlphaManagerData/UI-LoadMaskButtons.txt"
 
-
-[RoutineCall, loadExistingAlphas ]
-
 //[RoutineCall, createBrushAlpha]
+
+[RoutineCall, loadExistingAlphas ] // "./AlphaManagerData/loadExistingAlphas.txt"

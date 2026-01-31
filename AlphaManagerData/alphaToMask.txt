@@ -3,7 +3,13 @@
 [RoutineDef, alphaToMask
 ,
 
-	[IPress, "Tool:Masking:Mask By Alpha" ]
+	[If, [IExists, Tool:Masking:Mask By Alpha ]
+	, // THEN
+		[IPress, Tool:Masking:Mask By Alpha ]
+	, // ELSE
+	
+	]
+
 
 	//[VarSet, $psd_path, [FileNameAsk, "PSD(*.psd)", , "Browse psd file..."]]
 	//

@@ -1,9 +1,10 @@
-/** load Alphas which exists already in "C:\Program Files\Pixologic\ZBrush 2022\ZData\Alphas"
-  *
+/** Load alphas psd files to AlphaManager plugin memory
+  
+	load files in in "C:\Program Files\Pixologic\ZBrush 2022\ZData\Alphas"
   */
 [RoutineDef, loadExistingAlphas
 ,
-
+	//[Note, "loadExistingAlphas",, 1]
 	[VarSet, folderName, [FileNameResolvePath, $ALPHA_DEFAULT_FOLDER]]
 
 	/* Get file count */
@@ -20,7 +21,8 @@
 	/* create a memblock to get the file name */
 	[MemCreate, ZFileUtils_list, 512, 0]
 
-	[Loop, fileCount, //loop through the files
+	/* LOOP EACH PSD FILE IN FOLDER */ 
+	[Loop, fileCount,
 
 		/* get the filename */
 		[VarSet, err, [FileExecute, $ZFILE_UTILS_DLL, "GetFile", , , ZFileUtils_list]]

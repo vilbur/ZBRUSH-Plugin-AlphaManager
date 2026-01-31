@@ -9,7 +9,7 @@
 		[MVarDef, LAST_USED_ALPHA, 1]
 		[MVarSet, LAST_USED_ALPHA, 0, [IGet, ALPHA:ItemInfo]]
 
-		[IPress,Alpha:Alpha Off]
+		[IPress, Alpha:Alpha Off]
 
 	, // TURN ON if alpha is not defined
 

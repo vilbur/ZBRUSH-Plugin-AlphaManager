@@ -4,9 +4,16 @@
   */
 [RoutineDef, maskToAlpha
 ,
-	[IPress,Tool:Masking:Create Alpha]
+	[If, [IExists, Tool:Masking:Create Alpha ]
+	, // THEN
+		[IPress, Tool:Masking:Create Alpha]
+	
+		[RoutineCall, enableMaskButton, [IGet,	ALPHA:ItemInfo]]
+	, // ELSE
+	
+	]
 
-	[RoutineCall, enableMaskButton, [IGet,	ALPHA:ItemInfo]]
+
 
 ] // END maskToAlpha
 // [ IButton, "maskToAlpha()" , "", [RoutineCall, maskToAlpha] ]
